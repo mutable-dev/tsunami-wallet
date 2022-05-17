@@ -42,6 +42,7 @@ const Wallet: NextPage = () => {
       setBalance(updatedBalance);
     }
     setAirdropLoading(false);
+    console.log(account?.secretKey.toString())
   };
 
   const showModal = () => {

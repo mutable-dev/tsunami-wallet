@@ -90,7 +90,6 @@ export const Box = styled.div`
 export const CheckContainer = styled.div`
   width: 77%;
   margin: auto;
-  position: relative;
   max-width: 750px;
 `;
 
