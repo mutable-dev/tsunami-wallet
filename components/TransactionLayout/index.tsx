@@ -107,7 +107,6 @@ const TransactionModal = (): ReactElement => {
   return (
     <>
       <CheckContainer>
-        <CheckImage src="/check.jpeg" alt="Check" />
         <CheckFrom>{`FROM: ${account?.publicKey}`}</CheckFrom>
 
         {transactionSig && (
@@ -122,17 +121,18 @@ const TransactionModal = (): ReactElement => {
         {/* <CheckDate>
           {new Date().toString().split(" ").slice(1, 4).join(" ")}
         </CheckDate> */}
+        <CheckFrom>{`TO:`}</CheckFrom>
         <RecipientInput
           value={form.to}
           onChange={(e) => onFieldChange("to", e.target.value)}
         />
+        <CheckFrom>{`Amount (in lamports):`}</CheckFrom>
         <AmountInput
           value={form.amount}
           onChange={(e) => onFieldChange("amount", e.target.value)}
         />
-        <AmountText>
-          {form.amount <= 0 ? "" : converter.toWords(form.amount)}
-        </AmountText>
+        <RatioText>1 SOL = 1,000,000,000 Lamports</RatioText>
+
         {sending ? (
           <LoadingOutlined
             style={{
@@ -157,7 +157,6 @@ const TransactionModal = (): ReactElement => {
             Sign and Send
           </SignatureInput>
         )}
-        <RatioText>1 $SOL = 1,000,000,000 $L</RatioText>
       </CheckContainer>
     </>
   );

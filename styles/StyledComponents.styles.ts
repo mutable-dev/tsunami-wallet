@@ -91,6 +91,10 @@ export const CheckContainer = styled.div`
   width: 77%;
   margin: auto;
   max-width: 750px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const CheckImage = styled.img`
@@ -98,17 +102,9 @@ export const CheckImage = styled.img`
 `;
 
 export const CheckFrom = styled.p`
-  position: absolute;
-  top: 11%;
-  left: 3.6%;
 `;
 
 export const Processed = styled.a`
-  position: absolute;
-  top: 20%;
-  left: 3.6%;
-  font-style: italic;
-  color: #dc1fff;
 `;
 
 export const CheckDate = styled.p`
@@ -118,25 +114,18 @@ export const CheckDate = styled.p`
 `;
 
 export const RecipientInput = styled(Input)`
-  position: absolute;
-  top: 35%;
-  left: 17%;
   height: 9%;
   width: 50%;
+  margin-bottom: 1.5rem;
 `;
 
 export const AmountInput = styled(Input)`
-  position: absolute;
-  top: 35%;
-  left: 76%;
   height: 9%;
   width: 15%;
 `;
 
 export const SignatureInput = styled(Button)`
-  position: absolute;
   top: 69%;
-  left: 59%;
   height: 9%;
   width: 32.5%;
 `;
@@ -148,7 +137,4 @@ export const AmountText = styled.p`
 `;
 
 export const RatioText = styled.p`
-  position: absolute;
-  top: 71%;
-  left: 11%;
 `;
